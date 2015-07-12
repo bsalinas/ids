@@ -154,7 +154,8 @@ static int ids_core_Camera_init(ids_core_Camera *self, PyObject *args, PyObject 
     static char *kwlist[] = {"handle", "color", NULL};
     self->handle = 0;
     self->bitdepth = 0;
-    self->color = IS_CM_RGB8_PACKED;
+    //Default to IS_CM_BGR8_PACKED because it is supported on all the cameras. The XS does not support RGB8.
+    self->color = IS_CM_BGR8_PACKED;//IS_CM_RGB8_PACKED;
     self->autofeatures = 0;
     self->ready = NOT_READY;
     LIST_INIT(&self->mem_list);
