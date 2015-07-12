@@ -50,6 +50,7 @@ void add_constants(PyObject *m) {
     PyModule_AddIntConstant(m, "COLOR_BGR5", IS_CM_BGR5_PACKED);
     PyModule_AddIntConstant(m, "COLOR_UYVY", IS_CM_UYVY_PACKED);
     PyModule_AddIntConstant(m, "COLOR_CBYCRY", IS_CM_CBYCRY_PACKED);
+    PyModule_AddIntConstant(m, "COLOR_JPEG", IS_CM_JPEG);
 
     PyModule_AddIntConstant(m, "FILETYPE_JPG", IS_IMG_JPG);
     PyModule_AddIntConstant(m, "FILETYPE_BMP", IS_IMG_BMP);
